@@ -1,9 +1,11 @@
-import React from 'react';
+import { Products } from './components';
 
 
 const App = () => {
   return (
-    <div className='font-display text-primary'>App</div>
+    <div className='container font-display text-primary overflow-hidden'>
+      <Products />
+    </div>
   )
 }
 
