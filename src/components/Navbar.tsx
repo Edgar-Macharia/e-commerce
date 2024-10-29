@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { navLinks } from '../constants'
+import { navLinks } from '../constants';
 import logo from '../assets/logo.svg';
+import Search from './Search';
 
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("");
 
   return (
     <nav className="w-full flex md:px-20 px-2 py-6 justify-between items-center bg-snow z-30 navbar">
@@ -14,9 +16,10 @@ const Navbar = () => {
         </span>
         mmerce
       </h2>
+
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
         <li className='mx-10'>
-          <input type="search" className='p-2 rounded-2xl outline-primary'/>
+          <Search />
         </li>
         <li className='mr-10 active:text-yellow'>
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 56 56">
@@ -25,15 +28,16 @@ const Navbar = () => {
         </li>
 
         {navLinks.map((nav, index) => (
-          <li key={nav.id} className={`cursor-pointer active:text-yellow ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}
+          <li key={nav.id} className={`cursor-pointer ${active === nav.id ? 'text-yellow' : 'text-primary'} ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}
+          onClick={() => setActive(nav.id)}
           >
             <a href={`#${nav.id}`}>
               {nav.title}
             </a>
           </li>
         ))}
-        
       </ul>
+
       <div className='sm:hidden flex flex-1 justify-end items-center'>
         <button className='mr-4 active:text-yellow'>
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 56 56">
@@ -59,8 +63,10 @@ const Navbar = () => {
             <h2 className="text-2xl font-bold mb-8 text-center">Ec<span><img src={logo} alt="ecommerce" className="w-[28px] h-[36px] inline-block pb-2" /></span>mmerce</h2>
 
             <ul className='list-none flex flex-col mt-8 items-center flex-1'>
+              <li className='mb-10'>Search</li>
               {navLinks.map((nav, index) => (
-                <li key={nav.id} className={`cursor-pointer text- ${index === navLinks.length - 1 ? 'mb-0' : 'mb-10'}`}
+                <li key={nav.id} className={`cursor-pointer ${active === nav.id ? 'text-yellow' : 'text-primary'} ${index === navLinks.length - 1 ? 'mb-0' : 'mb-10'}`}
+                onClick={() => setActive(nav.id)}
                 >
                   <a href={`#${nav.id}`}>
                     {nav.title}
