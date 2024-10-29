@@ -1,26 +1,26 @@
 export const navLinks = [
     {
-        id: "Shop",
+        id: "shop",
         title: "Shop",
     },
     {
-        id: "Checkout",
+        id: "checkout",
         title: "Checkout",
     },
     {
-        id: "Orders",
+        id: "my-orders",
         title: "My Orders",
     },
     {
-        id: "Categories",
+        id: "categories",
         title: "Categories",
     },
     {
-        id: "Account",
+        id: "account",
         title: "Account",
     },
     {
-        id: "Wishlist",
+        id: "wishlist",
         title: "Wishlist",
     }
 ]
