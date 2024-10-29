@@ -7,7 +7,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex md:px-20 px-2 py-6 justify-between items-center bg-snow navbar">
+    <nav className="w-full flex md:px-20 px-2 py-6 justify-between items-center bg-snow z-30 navbar">
       <h2 className='flex text-2xl font-bold cursor-pointer'>Ec
         <span>
           <img src={logo} alt='ecommerce' className='w-[28px] h-[36px] pb-2' />
@@ -41,7 +41,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        <button onClick={() => setToggle((prev) => !prev)} className='z-20'>
+        <button onClick={() => setToggle((prev) => !prev)} className='z-40'>
           {toggle ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
               <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -54,8 +54,8 @@ const Navbar = () => {
             </svg>
           )}</button>
 
-        <div className={`${toggle ? 'flex' : 'hidden'} fixed inset-0 z-10 bg-black bg-opacity-50`}>
-          <div className='p-6 bg-snow w-[60%] h-full shadow-lg sidebar relative'>
+        <div className={`${toggle ? 'flex' : 'hidden'} fixed inset-0 z-30 bg-black bg-opacity-50`}>
+          <div className='p-6 bg-snow w-[60%] h-full shadow-lg sidebar z-400 relative'>
             <h2 className="text-2xl font-bold mb-8 text-center">Ec<span><img src={logo} alt="ecommerce" className="w-[28px] h-[36px] inline-block pb-2" /></span>mmerce</h2>
 
             <ul className='list-none flex flex-col mt-8 items-center flex-1'>
