@@ -8,7 +8,7 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
         <nav aria-label="Breadcrumb" className="mt-2 pl-2">
             <ol className="flex items-center gap-1 text-sm text-gray-600">
                 <li>
-                    <a href="/" className="block transition hover:text-gray-700">
+                    <a href="/" className="block transition hover:text-primary">
                         <span className="sr-only"> Home </span>
 
                         <svg
@@ -44,7 +44,7 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
                 </li>
 
                 <li>
-                    <a href={pageName} className="block transition hover:text-gray-700"> {pageName} </a>
+                    <a href={pageName} className="block transition hover:text-primary"> {pageName} </a>
                 </li>
 
                 <li className="">
@@ -63,7 +63,7 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
                 </li>
 
                 <li>
-                    <a href={productName} className="block transition hover:text-gray-700"> {productName} </a>
+                    <a href={productName} className="block transition hover:text-primary"> {productName} </a>
                 </li>
             </ol>
         </nav>
