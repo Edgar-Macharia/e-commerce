@@ -12,21 +12,21 @@ import { Breadcrumb } from "../components"
 const Product = () => {
   return (
     <div>
-      <Breadcrumb pageName="product" productName={`Product Name`} />
+      <Breadcrumb pageName="Shop" productName={`Product Name`} />
 
       <div className="grid md:grid-cols-2 mt-6 gap-4 px-4 md:px-0">
-        <div className="grid grid-cols-3 space-x-2">
-          <div className="col-span-1 w-40 flex flex-col-reverse">
+        <div className="grid grid-cols-4 md:grid-cols-3 gap-2 md:gap-4">
+          <div className="col-span-1 md:w-40 px-2 flex flex-col space-y-2">
             {[...Array(3)].map((_, index) => (
               <img key={index}
               src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
-              alt=""
-              className={`h-24 object-cover sm:rounded-2xl sm:h-40 ${index < 2 ? 'my-2' : ''}`}
+              alt="product"
+              className={`h-32 md:h-40 object-cover rounded-2xl  ${index === 1 ? 'my-2' : ''}`}
             />
             ))}
           </div>
           
-          <div className="col-span-2">
+          <div className="col-span-3 md:col-span-2">
             <img
               src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
               alt=""
