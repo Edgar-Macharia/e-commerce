@@ -44,7 +44,7 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
                 </li>
 
                 <li>
-                    <a href={pageName} className="block transition hover:text-primary"> {pageName} </a>
+                    <a href={`/${pageName}`} className="block transition hover:text-primary"> {pageName} </a>
                 </li>
 
                 <li className="">
