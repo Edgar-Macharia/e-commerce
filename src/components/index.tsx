@@ -3,3 +3,4 @@ export { default as Navbar } from './Navbar';
 export { default as Cart } from './Cart';
 export { default as Search } from './Search';
 export { default as Breadcrumb } from './Breadcrumb';
+export { default as Quantity } from './Quantity';
