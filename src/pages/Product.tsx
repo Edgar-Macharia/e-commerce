@@ -1,4 +1,4 @@
-import { Breadcrumb } from "../components"
+import { Breadcrumb, Quantity } from "../components"
 
 
 // interface ProductType {
@@ -10,6 +10,7 @@ import { Breadcrumb } from "../components"
 
 
 const Product = () => {
+  
   return (
     <div>
       <Breadcrumb pageName="Shop" productName={`Product Name`} />
@@ -42,27 +43,7 @@ const Product = () => {
           <p className="my-6 font-light">This is the product description This is the product description This is the product description This is the product description This is the product description This is the product description This is the product description</p>
           <hr className="mb-6"/>
           <div className="fixed md:relative w-full bg-snow md:bg-transparent border-t md:border-none border-black/5 bottom-0 left-0 p-4 md:p-0 z-10 flex items-center justify-between sm:justify-start md:justify-center">
-            <div>
-              <label htmlFor="Quantity" className="sr-only"> Quantity </label>
-
-              <div className="flex items-center rounded-full border border-gray-200">
-                <button type="button" className="size-10 leading-10 text-gray-600 hover:text-primary transition">
-                  &minus;
-                </button>
-
-                <input
-                  type="number"
-                  id="Quantity"
-                  value="1"
-                  disabled
-                  className="h-10 w-16  border-transparent text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none outline-none"
-                />
-
-                <button type="button" className="size-10 leading-10 text-gray-600 hover:text-primary transition">
-                  +
-                </button>
-              </div>
-            </div>
+            <Quantity />
             <button className="bg-primary w-full ml-3 sm:ml-5 rounded-full h-11 md:h-[52px] text-sm sm:text-base text-white hover:bg-yellow transition-all">
               Add to Cart
             </button>
