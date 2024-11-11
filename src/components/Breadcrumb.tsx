@@ -5,7 +5,7 @@ interface Breadcrumbs {
 
 const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
     return (
-        <nav aria-label="Breadcrumb" className="mt-2 pl-2">
+        <nav aria-label="Breadcrumb" className="mt-2 mb-10 pl-2">
             <ol className="flex items-center gap-1 text-sm text-gray-600">
                 <li>
                     <a href="/" className="block transition hover:text-primary">
@@ -47,7 +47,10 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
                     <a href={`/${pageName}`} className="block transition hover:text-primary"> {pageName} </a>
                 </li>
 
-                <li className="">
+               {
+                productName === '' ? '' :
+                <>
+                 <li className="">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="size-4"
@@ -65,6 +68,8 @@ const Breadcrumb = ({ pageName, productName }: Breadcrumbs) => {
                 <li>
                     <a href={productName} className="block transition hover:text-primary"> {productName} </a>
                 </li>
+                </>
+               }
             </ol>
         </nav>
     )
